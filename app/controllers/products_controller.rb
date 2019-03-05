@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    Product.create(product_params)
+    @product = Product.create(product_params)
     render json: @product, status: 201
   end
 
@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
   def product_data
     product = Product.find(params[:id])
     render json: product.to_json(only: [:id, :name, :price, :description, :inventory])
-  end 
+  end
 
   private
 
