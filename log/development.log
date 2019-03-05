@@ -1744,3 +1744,14 @@ Cannot render console from 50.200.219.118! Allowed networks: 127.0.0.1, ::1, 127
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.200.219.118 at 2019-03-05 16:01:30 +0000
 Cannot render console from 50.200.219.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/products" for 50.200.219.118 at 2019-03-05 16:01:39 +0000
+Cannot render console from 50.200.219.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ux/VimJNcP73a5R3AxXZiAuQDEgr5F2nKruobAaiy6RkITxpnam37yLTnRcVDwryOTQQEuq08SMdDmgOXugk1w==", "product"=>{"name"=>"Test name", "price"=>"12", "description"=>"No", "inventory"=>"12"}, "commit"=>"submit"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test name"], ["description", "No"], ["inventory", 12], ["price", 12], ["created_at", "2019-03-05 16:01:39.355874"], ["updated_at", "2019-03-05 16:01:39.355874"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.16ms)
+Completed 201 Created in 20ms (Views: 13.4ms | ActiveRecord: 3.3ms)
