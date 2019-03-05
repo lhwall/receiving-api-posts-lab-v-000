@@ -15,10 +15,10 @@
 <% end %>
 
 <div id="result">
-  <h2 id="name"></h2>
-  <p id="price"></p>
-  <p id="description"></p>
-  <p id="inventory"></p>
+  <h2 id="productName"></h2>
+  <p id="productPrice"></p>
+  <p id="productDescription"></p>
+  <p id="productInventory"></p>
 </div>
 
 
@@ -30,10 +30,10 @@ $('form').submit(function(event){
   var posting = $.post('/products', values)
   posting.done(function(data){
 var post = data
-$("#name").text(post["name"]);
-$("#price").text(post["price"]);
-$("#description").text(post["description"]);
-$("#inventory").text(post["inventory"]);
+$("#productName").text(post["name"]);
+$("#productPrice").text(post["price"]);
+$("#productDescription").text(post["description"]);
+$("#productInventory").text(post["inventory"]);
 
 })
 })
